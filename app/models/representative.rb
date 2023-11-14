@@ -17,9 +17,12 @@ class Representative < ApplicationRecord
         end
       end
 
-      rep = Representative.create!({ name: official.name, ocdid: ocdid_temp,
-          title: title_temp })
-      reps.push(rep)
+      rep_exist = Representative.find_by(name: official.name)
+      if rep_exist.nil?
+        rep = Representative.create!({ name: official.name, ocdid: ocdid_temp,
+            title: title_temp })
+        reps.push(rep)
+      end
     end
 
     reps
