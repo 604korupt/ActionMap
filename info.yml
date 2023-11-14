@@ -1,0 +1,20 @@
+project:
+  name: 'CS169-fa23-45'
+  owner: 'fa23'
+  teamId: '45'
+  identities: {}
+  notifications:
+    email: 'brandonlai@berkeley.edu'
+  members:
+    member1:
+      name: 'Brandon'
+      surname: 'Lai' 
+      githubUsername: '604korupt'
+    member2:
+      name: 'Xinkai'
+      surname: 'Zou' 
+      githubUsername: 'jayzou3773'
+    member3:
+      name: 'Youhua'
+      surname: 'Chen' 
+      githubUsername: 'youhuaawesome'
