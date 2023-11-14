@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - ubuntu-18.04
+          - ubuntu-22.04
     steps:
       - name: Cache multiple paths
         uses: actions/cache@v2
@@ -23,7 +23,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v3
         with:
-          node-version: 12.13.1
+          node-version: 13.14.0
       - uses: ruby/setup-ruby@v1
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
@@ -35,3 +35,8 @@ jobs:
       - run: bundle exec rake db:test:prepare
       - run: bundle exec rspec
       - run: bundle exec cucumber
+      - shell: bash
+          env:
+            RAILS_MASTER_KEY: fd851f99e10f2231ffc666c93c62ba43
+          run: |
+            example-command "$RAILS_MASTER_KEY"
