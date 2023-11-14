@@ -35,6 +35,12 @@ jobs:
       - run: bundle exec rake db:test:prepare
       - run: bundle exec rspec
       - run: bundle exec cucumber
+      #
+      #- shell: bash
+      #    env:
+      #      SUPER_SECRET: ${{ secrets.SuperSecret }}
+      #    run: |
+      #      example-command "$SUPER_SECRET"
       - shell: bash
           env:
             RAILS_MASTER_KEY: fd851f99e10f2231ffc666c93c62ba43
