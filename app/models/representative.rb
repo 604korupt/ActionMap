@@ -23,7 +23,6 @@ class Representative < ApplicationRecord
             title: title_temp })
         reps.push(rep)
       else
-        #show user request
         reps.push(rep_exist)
       end
     end
