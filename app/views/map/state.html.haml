@@ -29,7 +29,7 @@
                                         %th View
                                 %tbody
                                     - @state.counties.each_with_index do |county, index|
-                                        - address = county.name + ', ' + @state.symbol
+                                        - address = "#{county.name}, #{@state.symbol}"
                                         %tr
                                             %td= index + 1
                                             %td= county.name
