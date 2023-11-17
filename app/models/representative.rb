@@ -18,7 +18,8 @@ class Representative < ApplicationRecord
 
       rep_exist = Representative.find_by(name: official.name, title: title_temp)
       if rep_exist.nil?
-        rep = Representative.create!({ name: official.name, ocdid: ocdid_temp, title: title_temp })
+        rep = Representative.create!({ name: official.name, ocdid: ocdid_temp, title: title_temp,
+        address: parse_address(official), party: party?(official), photo: official.photo_url})
         reps.push(rep)
       else
         reps.push(rep_exist)
