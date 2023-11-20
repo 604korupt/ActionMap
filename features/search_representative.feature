@@ -10,6 +10,9 @@ Scenario: Search with city and state
   When I fill in "address" with "Berkeley, CA"
   And I press "commit"
   Then I should see "Joseph R. Biden"
+  When I follow "Joseph R. Biden"
+  Then I should see "Joseph R. Biden"
+  And I should see "Democratic Party"
 
 Scenario: Search with a blank address
   Given I am on the home page

@@ -1,2 +1,6 @@
 # frozen_string_literal: true
-# commenting this cuz rspec isn't happy
+
+# string is symbol here
+Then('I click {string} on state map') do |string|
+  visit "state/#{string}"
+end

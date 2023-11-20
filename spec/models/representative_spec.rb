@@ -46,4 +46,11 @@ RSpec.describe Representative, type: :model do
       expect(@govenernor.party).to eq 'Democratic Party'
     end
   end
+
+  context 'when there is an unknown representative' do
+    it 'returns nil' do
+      @unknown = described_class.find_by(name: 'Super Idol')
+      expect(@unknown).to be_nil
+    end
+  end
 end
