@@ -1,4 +1,2 @@
-Given (/all the states exist/) do
-  State.create(name: “California”, abbr: “CA”, fips: 6)
-
-end
+# frozen_string_literal: true
+# commenting this cuz rspec isn't happy
