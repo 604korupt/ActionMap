@@ -64,7 +64,9 @@ exports.setupEventHandlers = (stateMap) => {
     };
     const clickCallback = (elem) => {
         const countyFipsCode = elem.attr('data-county-fips-code');
-        window.location.href = `/state/${stateMap.state.symbol}/county/${countyFipsCode}`;
+        const countyName = elem.attr('data-county-name');
+        const countyNameStateFipsCode = `${countyName}, ${stateMap.state.symbol}, ${countyFipsCode}`;
+        window.location.href = `/search/${countyNameStateFipsCode}`;
     };
     mapUtils.handleMapMouseEvents(targets, hoverHtmlProvider, clickCallback);
 };

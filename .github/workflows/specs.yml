@@ -13,6 +13,10 @@ jobs:
         os:
           - ubuntu-22.04
     steps:
+      - shell: bash
+        env:
+          RAILS_MASTER_KEY: ${{ secrets.RAILS_MASTER_KEY }}
+        run: touch master.key && echo "$RAILS_MASTER_KEY" > master.key
       - name: Cache multiple paths
         uses: actions/cache@v2
         with:
@@ -28,21 +32,10 @@ jobs:
         with:
           bundler-cache: true # runs 'bundle install' and caches installed gems automatically
       - run: gem install bundler:2.1.4
-      - run: npm install -g yarn@1.22.4
+      - run: npm install -g yarn@1.19.1
       - run: bundle install
       - run: yarn install
       - run: bundle exec rake db:setup
       - run: bundle exec rake db:test:prepare
       - run: bundle exec rspec
       - run: bundle exec cucumber
-      #
-      #- shell: bash
-      #    env:
-      #      SUPER_SECRET: ${{ secrets.SuperSecret }}
-      #    run: |
-      #      example-command "$SUPER_SECRET"
-      - shell: bash
-          env:
-            RAILS_MASTER_KEY: fd851f99e10f2231ffc666c93c62ba43
-          run: |
-            example-command "$RAILS_MASTER_KEY"
