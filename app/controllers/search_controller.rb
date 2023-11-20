@@ -11,7 +11,7 @@ class SearchController < ApplicationController
       result = service.representative_info_by_address(address: address)
       @representatives = Representative.civic_api_to_representative_params(result)
     rescue StandardError
-      flash[:notice] = "Invalid address! Please enter a valid location."
+      flash[:notice] = 'Invalid address! Please enter a valid location.'
       redirect_to representatives_path
       return
     end
