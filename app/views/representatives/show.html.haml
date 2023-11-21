@@ -9,7 +9,7 @@
     }
 .overview
     %img.displayed{ src: @representative.photo, width: '200', height: '240' }
-    - unless @representative.photo.blank?
+    - if @representative.photo.blank?
         %h5.text-center No image available
     %h1.text-center= @representative.name
     %h2.text-center= @representative.title
