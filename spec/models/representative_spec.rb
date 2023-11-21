@@ -21,14 +21,14 @@ describe Representative do
     end
 
     it 'returns a list of representatives' do
-      allow(stub_offices).to receive_messages(name: 'Donald J. Trump')
+      allow(stub_offices).to receive_messages(name: 'Joseph R. Biden')
       allow(stub_offices).to receive_messages(division_id: 'ocd-division/country:us')
       result = described_class.civic_api_to_representative_params(sample_info)
       expect(result.size).to be >= 1
     end
 
     it 'does not have duplicates' do
-      allow(stub_offices).to receive_messages(name: 'Donald J. Trump')
+      allow(stub_offices).to receive_messages(name: 'Joseph R. Biden')
       allow(stub_offices).to receive_messages(division_id: 'ocd-division/country:us')
       result = described_class.civic_api_to_representative_params(sample_info)
       described_class.civic_api_to_representative_params(sample_info)
