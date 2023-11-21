@@ -12,3 +12,8 @@ Scenario: Click on a county
   Given I am on the home page
   Then I click "CA" on the state map
   Then I click on county "Lake"
+
+Scenario: Click on a web link
+  Given I am on the home page
+  When I follow "Google Civic Information"
+  
