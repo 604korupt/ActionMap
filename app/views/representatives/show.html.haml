@@ -7,8 +7,9 @@
     white-space: pre-line
     }
 .overview
-    %img.displayed{ src: @representative.photo,
-                    width: '500', height: '600' }
+    %img.displayed{ src: @representative.photo, width: '200', height: '240', style: 'margin-top: 20px;' }
+    - if !@representative.photo.present?
+        %h5.text-center No image available
     %h1.text-center= @representative.name
     %h2.text-center= @representative.title
     %h3.text-center= @representative.party
