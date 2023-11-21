@@ -25,4 +25,10 @@ Scenario: Search with state
   Given I am on the representatives page
   And I fill in "address" with "California"
   And I press "commit"
-  Then I should see "Joseph R. Biden"
+  Then I should see "Gavin Newsom"
+
+Scenario: Search with county
+  Given I am on the representatives page
+  And I fill in "address" with "Alameda County, CA"
+  And I press "commit"
+  Then I should see "Pamela Price"
