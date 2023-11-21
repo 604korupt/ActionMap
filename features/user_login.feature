@@ -7,10 +7,38 @@ Scenario: Login with Google
   Given I am on the home page
   When I go to the login page
   Then I should see "Sign In"
+<<<<<<< HEAD
   Then I follow " Sign in with Google "
+=======
+  Then I press "Sign in with Google"
+  Then I should see "National Map"
+>>>>>>> e59f8fd08d4bd4c0704541d225c63de43344d76e
 
 Scenario: Login with GitHub
   Given I am on the home page
   When I go to the login page
   Then I should see "Sign In"
+<<<<<<< HEAD
   Then I follow " Sign in with Github "
+=======
+  Then I press "Sign in with GitHub"
+  Then I should see "National Map"
+
+Scenario: I can go to user profile with logging into account
+  Given I am on the home page
+  When I go to the login page
+  Then I press "Sign in with Google"
+  Then I should go to user profile
+
+Scenario: Logout Account
+  Given I am on the home page
+  When I go to the logout page
+  Then I should see "You have successfully logged out."
+
+Scenario: Logged into Account already
+  Given I am on the home page
+  When I go to the login page
+  Then I press "Sign in with Google"
+  When I go to the login page
+  Then I should see "You are already logged in. Logout to switch accounts."
+>>>>>>> e59f8fd08d4bd4c0704541d225c63de43344d76e
