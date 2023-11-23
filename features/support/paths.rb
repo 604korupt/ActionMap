@@ -18,9 +18,15 @@ module NavigationHelpers
     
     when /^the login page$/
       '/login'
+
+    when /^the map page$/
+      root_path
     
     when /^the representatives page$/
       '/representatives'
+
+    when /^the state map page of "(.*)"$/
+      "/state/#{Regexp.last_match(1)}"
 
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
