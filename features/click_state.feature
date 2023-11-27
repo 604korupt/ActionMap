@@ -4,8 +4,9 @@ Feature: User can click on a state and click on a county to see a list of repres
   I want to click on a county to see the list of representatives
 
 Scenario: Click on a state
-  Given I am on the home page
-  Then I click "CA" on the state map
+  Given some default states exist
+  And I am on the home page
+  When I click "CA" on the state map
   Then I should see "California"
 
 Scenario: Click on a county
