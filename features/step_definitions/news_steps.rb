@@ -15,9 +15,7 @@ end
 
 When /^(?:|I )look up news of "([^"]*)"$/ do |rep_name|
   rep_row = find('tr', text: rep_name)
-
   within rep_row do
     click_link('News Article')
   end
-
 end
