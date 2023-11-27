@@ -16,8 +16,11 @@ Background: set's up joe biden's news page
 
   Given the following articles exist:
   | title           | link                        | description        | representative_id       |
-  | whitehouse     | https://www.whitehouse.gov/  | whitehouse         | 3                       |
+  | whitehouse      | https://www.whitehouse.gov/ | whitehouse         | 1                       |
 
+  # Joe Biden's representative id is 1 in testing development
+  Then 1 seed news_items should exist
+  
 Scenario: looking at the page for joe
   When I look up news of "Joseph R. Biden"
   Then I should see "Listing News Articles for Joseph R. Biden"
