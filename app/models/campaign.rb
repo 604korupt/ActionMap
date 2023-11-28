@@ -22,14 +22,16 @@ class Campaign < ActiveRecord::Base
   end
   
   def self.categories
-    {'Candidate Loan'	=> 'candidate-loan.json',
-    'Contribution Total' =>	'contribution-total.json',
-    'Debts Owed' =>	'debts-owed.json',
+    { 
+    'Candidate Loan' => 'candidate-loan.json',
+    'Contribution Total' => 'contribution-total.json',
+    'Debts Owed' => 'debts-owed.json',
     'Disbursements Total' => 'disbursements-total.json',
     'End Cash' => 'end-cash.json',
-    'Individual Total' =>	'individual-total.json',
-    'PAC Total'	=> 'pac-total.json',
-    'Receipts Total' =>	'receipts-total.json',
-    'Refund Total' =>	'refund-total.json'}
+    'Individual Total' => 'individual-total.json',
+    'PAC Total' => 'pac-total.json',
+    'Receipts Total' => 'receipts-total.json',
+    'Refund Total' => 'refund-total.json' 
+    }
   end
 end
