@@ -12,4 +12,5 @@ Scenario: Click on a state
 Scenario: Click on a county
   Given I am on the home page
   Then I click "CA" on the state map
-  Then I click on county "Lake"
+  Then I click on county "Lake County"
+  Then I should see "President of the United States"
