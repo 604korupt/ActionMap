@@ -25,6 +25,8 @@ Scenario: after login, should be able to add news article to a representative
     And I press "Save"
     Then I should see "News item was successfully created."
     And I should see "Test News"
+    And I should see "Issue"
+    And I should see "Free Speech"
     Then I follow "View all articles"
     Then I should see "Test News"
     And I should see "Delete"

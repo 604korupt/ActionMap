@@ -14,6 +14,7 @@ And(/fill in the information for news article/) do
   fill_in('news_item[link]', with: 'https://testnews.com')
   fill_in('news_item[description]', with: 'This is test description')
   select 'Joseph R. Biden', from: 'news_item[representative_id]'
+  select 'Free Speech', from: 'news_item[issue]'
 end
 
 And(/I fill in the updated information for news article/) do
