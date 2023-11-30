@@ -12,5 +12,6 @@ Scenario: Seeing Main Page
 Scenario: Searching
   Given I am on the home page
   When I go to the campaign_finance page
+  Then I should see "Search for Campaign Finance"
   When I press "Search"
   Then I should see "MCMAHON, LINDA"
