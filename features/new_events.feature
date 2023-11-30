@@ -17,5 +17,5 @@ Scenario:
   Then I press "Sign in with Google"
   Then I should see "National Map"
   When I go to the new_my_event page
-  Then I press "View all events "
+  Then I follow "View all events"
   Then I should see "Event"
